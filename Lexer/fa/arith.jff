@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 7.1.--><structure>
+	<type>fa</type>
+	<automaton>
+		<!--The list of states.-->
+		<state id="0" name="q0">
+			<x>103.0</x>
+			<y>117.0</y>
+			<initial/>
+		</state>
+		<state id="1" name="q1">
+			<x>484.0</x>
+			<y>100.0</y>
+			<label>Token::OpAdd</label>
+			<final/>
+		</state>
+		<state id="2" name="q2">
+			<x>481.0</x>
+			<y>169.0</y>
+			<label>Token::OpSub</label>
+			<final/>
+		</state>
+		<state id="3" name="q3">
+			<x>402.0</x>
+			<y>230.0</y>
+			<label>Token::OpMul</label>
+			<final/>
+		</state>
+		<state id="4" name="q4">
+			<x>483.0</x>
+			<y>31.0</y>
+			<label>Token::OpDiv</label>
+			<final/>
+		</state>
+		<state id="5" name="q5">
+			<x>408.0</x>
+			<y>464.0</y>
+			<label>Token::OpenPar</label>
+			<final/>
+		</state>
+		<state id="6" name="q6">
+			<x>72.0</x>
+			<y>253.0</y>
+			<label>Token::ClosePar</label>
+			<final/>
+		</state>
+		<state id="7" name="q7">
+			<x>264.0</x>
+			<y>388.0</y>
+		</state>
+		<state id="8" name="%bcomment">
+			<x>539.0</x>
+			<y>378.0</y>
+			<final/>
+		</state>
+		<!--The list of transitions.-->
+		<transition>
+			<from>7</from>
+			<to>5</to>
+			<read/>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>+</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>4</to>
+			<read>/</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>3</to>
+			<read>*</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>7</to>
+			<read>(</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>6</to>
+			<read>)</read>
+		</transition>
+		<transition>
+			<from>7</from>
+			<to>8</to>
+			<read>-*</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>2</to>
+			<read>-</read>
+		</transition>
+		<note>
+			<text>Name:arith</text>
+			<x>98.0</x>
+			<y>46.0</y>
+		</note>
+	</automaton>
+</structure>

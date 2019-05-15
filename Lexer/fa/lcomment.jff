@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--Created with JFLAP 7.1.--><structure>
+	<type>fa</type>
+	<automaton>
+		<!--The list of states.-->
+		<state id="0" name="q0">
+			<x>75.0</x>
+			<y>99.0</y>
+			<initial/>
+		</state>
+		<state id="1" name="q1">
+			<x>210.0</x>
+			<y>95.0</y>
+		</state>
+		<state id="2" name="%Start">
+			<x>373.0</x>
+			<y>96.0</y>
+			<final/>
+		</state>
+		<state id="3" name="q3">
+			<x>341.0</x>
+			<y>207.0</y>
+			<label>Token::Eof</label>
+			<final/>
+		</state>
+		<!--The list of transitions.-->
+		<transition>
+			<from>1</from>
+			<to>2</to>
+			<read>-EOL</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>3</to>
+			<read>-EOF</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>1</to>
+			<read>-Other</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>-#</read>
+		</transition>
+		<note>
+			<text>Name:Lcomment</text>
+			<x>35.0</x>
+			<y>29.0</y>
+		</note>
+	</automaton>
+</structure>

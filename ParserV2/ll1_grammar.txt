@@ -1,0 +1,13 @@
+Parse-> Stmt_list
+Stmt_list-> stmt 
+stmt->Print Stmt_list_Prime
+stmt->Ident Stmt_list_Prime
+Stmt_list_Prime-> Eol expr Stmt_list_Prime
+expr->Term expr_prime
+expr_prime-> OpAssign Term expr_prime
+expr_prime-> OpAdd Term expr_prime
+Term-> Factor Term_prime
+Term_prime->OpMul Factor Term_prim
+Factor->Number
+Factor-> OpenPar expr ClosePar
+Factor-> Ident
